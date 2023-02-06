@@ -8,7 +8,8 @@ const products = [];
 router.get('/addProduct', (req, res, next) => {
 	//res.sendFile(path.join(__dirname, '..', 'views', 'add-product.html'));
 
-	res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
+	// res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
+	res.render('add-product', { pageTitle: 'Add Product' });
 });
 
 router.post('/addProduct', (req, res, next) => {
